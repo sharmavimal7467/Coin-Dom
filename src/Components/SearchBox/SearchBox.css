@@ -1,0 +1,22 @@
+.scrollbar-thumb-gray-100{
+    /* --scrollbar-thumb:grey !important; */
+}
+
+.scrollbar-track-gray-200{
+    /* --scrollbar-track:#323232 !important; */
+}
+
+.scrollbar-thin::-webkit-scrollbar{
+    /* display: block; */
+    width: 8px;
+    height: 8px ;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #9CA3AF; /* Gray color for the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background-color: #181717; /* Dark background for the scrollbar track */
+}

@@ -1,0 +1,10 @@
+.expand{
+    display: block;
+    position: absolute;
+    right: 0px;
+}
+
+.collapse{
+    width: 75%;
+    overflow: hidden;
+}
