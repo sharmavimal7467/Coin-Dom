@@ -12,7 +12,6 @@ const initialState={
 export const fetchTrendingData = createAsyncThunk("trendingCoins/fetchTrendingData" , async ()=>{
                 return await axios.get("https://api.coingecko.com/api/v3/search/trending")
                 .then(response=>response.data)
-                .catch((err)=> console.error(err))
 })
 
 

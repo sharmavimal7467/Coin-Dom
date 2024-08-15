@@ -102,7 +102,29 @@ const SavedCoins = () => {
         //
         //  }
 
+        const errorSavedCoins = useSelector(state=>state.savedCoins.error)
+
+        console.log("coinSlice error",errorSavedCoins)
+
+        const loadingSavedCoins = useSelector(state=>state.savedCoins.loading)
+
+        console.log("coinSlice loading",loadingSavedCoins)
         
+        if(errorSavedCoins){
+          return(
+            <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+              Something went wrong,Please Try Again.
+            </div>
+          )
+      }
+
+      if(loadingSavedCoins){
+        return(
+          <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+            loading...
+          </div>
+        )
+      }
 
 
   return (

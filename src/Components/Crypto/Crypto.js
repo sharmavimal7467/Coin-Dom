@@ -40,12 +40,23 @@ const Crypto = () => {
   //TOTAL DATA FETCH FROM API
   const coins = useSelector(state=>state.showCoin.posts)
 
-  // console.log("main array",coins)
+  console.log("main array",coins)
 
 
     // console.log("length of main array",coins.length)
 
+    //ERROR DATA FETCH FROM API
+    const coinsError = useSelector(state=>state.showCoin.error)
 
+    console.log("coinSlice error",coinsError)
+
+     //loading DATA FETCH FROM API
+     const coinsLoading = useSelector(state=>state.showCoin.loading)
+
+     console.log("coinSlice loading",coinsLoading)
+
+
+     
  
 
      //SEARCH COINS
@@ -250,6 +261,21 @@ const Crypto = () => {
       //   SetShow(showDetailComp.inputValue)
       // },[showDetailComp.inputValue])
 
+      if(coinsError){
+          return(
+            <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+              Something went wrong,Please Try Again.
+            </div>
+          )
+      }
+
+      if(coinsLoading){
+        return(
+          <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+            loading...
+          </div>
+        )
+      }
 
     return (
 

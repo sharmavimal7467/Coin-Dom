@@ -15,6 +15,14 @@ const Trending = () => {
     
     const trend = useSelector(state=>state.trendCoins.posts.coins)
 
+    const errorTrend = useSelector(state=>state.trendCoins.error)
+
+    console.log(errorTrend)
+
+    const loadingTrend = useSelector(state=>state.trendCoins.loading)
+
+    console.log(loadingTrend)
+
     // console.log(trend)
     // console.log(trend.trendCoins)
     // console.log(trend.trendCoins.posts)
@@ -31,6 +39,22 @@ const Trending = () => {
         console.log(item.item.id)
         dispatch(trendingCoinId(item.item.id))
         navigate("/detail")
+    }
+
+    if(errorTrend){
+        return(
+          <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+            Something went wrong,Please Try Again.
+          </div>
+        )
+    }
+
+    if(loadingTrend){
+      return(
+        <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+          loading...
+        </div>
+      )
     }
 
 

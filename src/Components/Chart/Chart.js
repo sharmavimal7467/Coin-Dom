@@ -103,6 +103,26 @@ const Chart = () => {
 
 
       // console.log(fullDetail)
+
+    //   const errorInClickCoinFullDetail = useSelector(state=>state.fullDetailCoin.error)
+
+    //   const loadingInClickCoinFullDetail = useSelector(state=>state.fullDetailCoin.loading)
+
+    //   if(errorInClickCoinFullDetail){
+    //     return(
+    //       <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+    //         Something went wrong,Please Try Again.
+    //       </div>
+    //     )
+    // }
+
+    // if(loadingInClickCoinFullDetail){
+    //   return(
+    //     <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+    //       loading...
+    //     </div>
+    //   )
+    // }
       
       
 

@@ -28,16 +28,24 @@ const DetailAboutCoin = () => {
       console.log(getCoinDetail.displayCoinDetail)
   
       console.log(getCoinDetail.displayCoinDetail[0])
+
+      // const errorIngetCoinDetail = useSelector(state=>state.detailCoin.error)
+
+      // console.log(errorIngetCoinDetail)
+
+      // const loadingIngetCoinDetail = useSelector(state=>state.detailCoin.loading)
+
+      // console.log(loadingIngetCoinDetail)
   
   
       useEffect(()=>{
-        console.log(getCoinDetail.displayCoinDetail[0])
+        // console.log(getCoinDetail.displayCoinDetail[0])
             if(getCoinDetail?.displayCoinDetail?.[0]){
                 SetSingleCoinDetailInObject(getCoinDetail.displayCoinDetail[0])
             }
         },[getCoinDetail])
     
-        console.log(singleCoinDetailInObject);
+        // console.log(singleCoinDetailInObject);
         
         const[singleCoinDetailInObjectWithId, SetSingleCoinDetailInObjectWithId] = useState("")
 
@@ -47,7 +55,7 @@ const DetailAboutCoin = () => {
           }
         },[singleCoinDetailInObject])
 
-        console.log(singleCoinDetailInObjectWithId)
+        // console.log(singleCoinDetailInObjectWithId)
 
         const showDetailComp = useSelector(state=>state.showComp.inputValue)
 
