@@ -91,8 +91,12 @@ const SearchBox = () => {
                 ))
             ) : loadingsearchCoinCrypto ? (
                 <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center'>loading...</div>
-            ) : errorSearchCoinCrypto && (
-                <li>No item available</li>
+            ) : errorSearchCoinCrypto ? (
+                <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center '>
+              Something went wrong,Please Try Again.
+            </div>
+            ) : (
+                <li className='font-extrabold text-white text-xl w-full h-full flex items-center justify-center' >No item available</li>
             )
         }
   </ul>
