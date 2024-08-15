@@ -54,7 +54,7 @@ const SearchBox = () => {
 
 
   return (
-    <ul className='w-[29.5%] h-96 bg-gray-200 overflow-x-hidden backdrop-filter backdrop-blur-md bg-opacity-60 scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200 overflow-y-scroll absolute  z-10'>
+    <ul className='w-[100%] xs:w-[80%] sm:w-[40%] lg:w-[36%] h-96 bg-gray-200 overflow-x-hidden backdrop-filter backdrop-blur-md bg-opacity-60 scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200 overflow-y-scroll absolute  z-10'>
         {
             searchDataArray && searchDataArray.length>0 ? (
                 searchDataArray.map((item,index)=>(

@@ -81,11 +81,15 @@ const FilterData = () => {
 
 
 function currencySymbols(){
-  
-  dispatch(currenyText(currencyInputText))
+  if(currencyInputText){
+    dispatch(currenyText(currencyInputText))
 
   SetCurrencyInputText('')
+  }
+  
 }
+
+// how we stop to show blank page when 404 402 and 429 type of error come in reactJs?
 
 const currencyTextInput = useSelector(state=>state.currenyInput.searchText).toLowerCase();
 
