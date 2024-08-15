@@ -52,6 +52,32 @@ const SearchBox = () => {
         dispatch(coinManageText(""))
        }
 
+       const errorSearchCoinCrypto = useSelector(state=>state.searchCoin.error)
+
+       console.log("errorSearchCoinCrypto error",errorSearchCoinCrypto)
+
+
+
+       const loadingsearchCoinCrypto = useSelector(state=>state.searchCoin.loading)
+
+       console.log("loadingsearchCoinCrypto loading",loadingsearchCoinCrypto)
+
+    //    if(errorSearchCoinCrypto){
+    //     return(
+    //       <div className='font-extrabold text-white text-xl w-full h-96 flex items-center justify-center '>
+    //         Something went wrong,Please Try Again.
+    //       </div>
+    //     )
+    // }
+
+    // if(loadingsearchCoinCrypto){
+    //   return(
+    //     <div className='font-extrabold text-white text-xl w-full h-96 flex items-center justify-center '>
+    //       loading...
+    //     </div>
+    //   )
+    // }
+
 
   return (
     <ul className='w-[100%] xs:w-[80%] sm:w-[40%] lg:w-[36%] h-96 bg-gray-200 overflow-x-hidden backdrop-filter backdrop-blur-md bg-opacity-60 scrollbar-thin scrollbar-thumb-gray-100 scrollbar-track-gray-200 overflow-y-scroll absolute  z-10'>
@@ -63,7 +89,9 @@ const SearchBox = () => {
                     <span className='text-white font-medium text-md cursor-pointer'>{item.name}</span>
                     </li>
                 ))
-            ) : (
+            ) : loadingsearchCoinCrypto ? (
+                <div className='font-extrabold text-white text-xl w-full h-[100vh] flex items-center justify-center'>loading...</div>
+            ) : errorSearchCoinCrypto && (
                 <li>No item available</li>
             )
         }
